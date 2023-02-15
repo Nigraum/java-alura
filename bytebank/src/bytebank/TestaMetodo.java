@@ -6,5 +6,8 @@ public class TestaMetodo {
 		contaDoDouglas.saldo = 100;
 		contaDoDouglas.deposita(50);
 		System.out.println(contaDoDouglas.saldo);
+		
+		contaDoDouglas.saca(20);
+		System.out.println(contaDoDouglas.saldo);
 	}
 }
