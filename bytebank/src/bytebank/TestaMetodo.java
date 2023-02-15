@@ -9,5 +9,12 @@ public class TestaMetodo {
 		
 		contaDoDouglas.saca(20);
 		System.out.println(contaDoDouglas.saldo);
+		
+		Conta contaDaMarcela = new Conta();
+		contaDaMarcela.deposita(1000);
+		
+		contaDaMarcela.transfere(500, contaDoDouglas);
+		System.out.println(contaDaMarcela.saldo);
+		System.out.println(contaDoDouglas.saldo);
 	}
 }
