@@ -5,7 +5,11 @@ public class SystemTest {
 		Gerente g = new Gerente();
 		g.setSenha(2222);
 		
+		Admin adm = new Admin();
+		adm.setSenha(3333);
+		
 		InternSystem si = new InternSystem();
 		si.autentica(g);
+		si.autentica(adm);
 	}
 }
