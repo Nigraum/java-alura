@@ -2,6 +2,9 @@ package bytebank_herdado;
 
 public class TesteGerente {
 	public static void main(String[] args) {
+		
+		Autenticavel g2 = new Gerente();
+		
 		Gerente g1 = new Gerente();
 		g1.setNome("Yan");
 		g1.setCpf("222.222.222-22");
@@ -10,9 +13,9 @@ public class TesteGerente {
 		System.out.println(g1.getCpf());
 		System.out.println(g1.getSalario());
 		
-		//g1.setSenha(2222);
-		//boolean autenticou = g1.autentica(2222);
-		//System.out.println(autenticou);
+		g1.setSenha(2222);
+		boolean autenticou = g1.autentica(2222);
+		System.out.println(autenticou);
 		System.out.println(g1.getBonificao());
 	}
 }
