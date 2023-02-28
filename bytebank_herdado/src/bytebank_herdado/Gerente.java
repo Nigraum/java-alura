@@ -3,7 +3,11 @@ package bytebank_herdado;
 //Gerente é um Funcionario, Gerente herda da class FuncionarioAutenticavel
 public class Gerente extends Funcionario implements Autenticavel {
 	
-	private int senha;
+	private PasswordSys autenticador;
+	
+	public Gerente() {
+		this.autenticador = new PasswordSys();
+	}
 
 	public double getBonificao() {
 		System.out.println("O metodo de bonificação é do GERENTE");
@@ -12,17 +16,13 @@ public class Gerente extends Funcionario implements Autenticavel {
 
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 		
 	}
 
 	@Override
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.autenticador.autentica(senha);
 	}
 	
 }
